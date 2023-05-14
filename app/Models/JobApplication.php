@@ -11,15 +11,21 @@ class JobApplication extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cover_letter',
-        'resume',
+        'message', 
+        'resume', 
+        'status', 
+        'job_id', 
+        'user_id',
     ];
 
+
+    // jobApplication belong to the applicant user
     public function users()
     {
         return $this->belongsTo(User::class);
     }
 
+    // jobApplication belong to the job 
     public function jobs()
     {
         return $this->belongsTo(Job::class);

@@ -43,23 +43,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    // user has to make a company to post jobs
     public function companies()
     {
         return $this->belongsTo(Company::class);
-        // return $this->hasMany(Company::class);
+        // return $this->hasMany(Company::class);     still thinking on wheather a user should be able to make more than one company
     }
 
+    // user can have many job application
     public function job_applications()
     {
         return $this->hasMany(JobApplication::class);
-    }
-
-    public function employer_dashboards()
-    {
-        return $this->hasOne(EmployerDashboard::class);
-    }
-    public function user_dashboards()
-    {
-        return $this->hasOne(UserDashboard::class);
     }
 }

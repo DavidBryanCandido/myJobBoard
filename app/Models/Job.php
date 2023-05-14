@@ -14,14 +14,19 @@ class Job extends Model
         'title',
         'description',
         'location',
-        'salary',
+        'type', 
+        'salary', 
+        'status', 
+        'company_id',
     ];
 
+    // job belongs to company
     public function companies()
     {
         return $this->belongsTo(Company::class);
     }
 
+    // job can have my job applications 
     public function job_applications()
     {
         return $this->hasMany(JobApplication::class);

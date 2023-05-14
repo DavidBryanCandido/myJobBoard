@@ -15,7 +15,9 @@ class CreateJobApplicationsTable extends Migration
     {
         Schema::create('job_applications', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('message')->nullable();
             $table->string('resume')->nullable();
+            $table->string('status')->default('pending');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('job_id');

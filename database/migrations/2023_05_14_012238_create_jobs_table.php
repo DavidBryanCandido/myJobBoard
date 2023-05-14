@@ -18,7 +18,9 @@ class CreateJobsTable extends Migration
             $table->string('title');
             $table->text('discription')->nullable();
             $table->string('location');
+            $table->string('type');
             $table->decimal('salary', 8, 2)->nullable();
+            $table->string('status')->default('pending');
             $table->unsignedBigInteger('company_id');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->softDeletes();

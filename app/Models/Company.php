@@ -14,13 +14,15 @@ class Company extends Model
         'name',
         'website',
         'logo',
+        'created_by',
+        'user_id',
     ];
-
+    // company belong to a user
     public function users()
     {
         return $this->belongsTo(User::class);
     }
-
+    // company can have many job
     public function jobs()
     {
         return $this->hasMany(Job::class);
