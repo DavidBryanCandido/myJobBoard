@@ -18,8 +18,8 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('website')->nullable();
             $table->string('logo')->nullable();
-            $table->unsignedBigInteger('created_by');
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

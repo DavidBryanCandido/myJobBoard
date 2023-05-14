@@ -20,9 +20,9 @@ class CreateJobsTable extends Migration
             $table->string('location');
             $table->string('type');
             $table->decimal('salary', 8, 2)->nullable();
-            $table->string('status')->default('pending');
+            $table->boolean('status')->default(1);
             $table->unsignedBigInteger('company_id');
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
