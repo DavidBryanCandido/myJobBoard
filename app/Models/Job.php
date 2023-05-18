@@ -23,8 +23,9 @@ class Job extends Model
     // job belongs to company
     public function companies()
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(Company::class, 'company_id');
     }
+
 
     // job can have my job applications 
     public function job_applications()

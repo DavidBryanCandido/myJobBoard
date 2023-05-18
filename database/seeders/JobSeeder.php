@@ -17,7 +17,7 @@ class JobSeeder extends Seeder
         DB::table('jobs')->insert([
             [
                 'title' => 'Manager',
-                'discription' => 'Krusty Crab Manager',
+                'description' => 'Krusty Crab Manager',
                 'location' => 'Kruty crab, Bikini Bottom',
                 'type' => 'Full-Time',
                 'salary' => 3.99,
@@ -28,7 +28,7 @@ class JobSeeder extends Seeder
             ],
             [
                 'title' => 'Spying',
-                'discription' => 'Spy on Krusty Crab Fry Cook',
+                'description' => 'Spy on Krusty Crab Fry Cook',
                 'location' => 'Chum bucket, Bikini Bottom',
                 'type' => 'Full-Time',
                 'salary' => 99.99,
@@ -39,7 +39,7 @@ class JobSeeder extends Seeder
             ],
             [
                 'title' => 'Fry Cook',
-                'discription' => 'Fry crabby patty',
+                'description' => 'Fry crabby patty',
                 'location' => 'Kruty crab, Bikini Bottom',
                 'type' => 'Full-Time',
                 'salary' => 1.99,
@@ -50,7 +50,7 @@ class JobSeeder extends Seeder
             ],
             [
                 'title' => 'Cashier',
-                'discription' => 'Do cashier stuff',
+                'description' => 'Do cashier stuff',
                 'location' => 'Kruty crab, Bikini Bottom',
                 'type' => 'Full-Time',
                 'salary' => 2.99,

@@ -16,7 +16,7 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->text('discription')->nullable();
+            $table->text('description')->nullable();
             $table->string('location');
             $table->string('type');
             $table->decimal('salary', 8, 2)->nullable();
