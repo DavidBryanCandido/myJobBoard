@@ -256,7 +256,7 @@ input[type="text"] {
     overflow: auto;
 }
 #text-area {
-    width: 650px;
+    min-width: 640px;
     max-width: 640px;
     height: 200px;
     padding: 12px 20px;
@@ -292,4 +292,107 @@ select {
     width: 300px;
     background-color: #005a91;
     align-self: center;
+}
+
+/* company.blade.php */
+
+.companiesBG {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+.companiesCon {
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    /* background-color: green; */
+}
+.searchCon {
+    width: 70%;
+    margin: auto;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.searchCon h1,
+h3 {
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+.searchIC {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.button3 {
+    width: 200px;
+    background-color: #005a91;
+    color: white;
+    margin-left: 16px;
+}
+
+/* companyCon */
+.concon {
+    /* background-color: white; */
+    width: 70%;
+    margin: auto;
+    margin-top: 26px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+}
+.concon h1 {
+    margin-bottom: 5px;
+}
+.companyCon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+    /* background-color: #005a91; */
+    max-height: 500px;
+    overflow: auto;
+    border-top: 1px solid #243140;
+}
+.companyContainer {
+    width: 280px;
+    height: 80px;
+    border: 1px solid #243140;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-left: 0px !important;
+}
+.companyLogo {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-color: #64717f;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.companyLogo img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+.companyinfo {
+    width: 68%;
+    height: 80px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.salalryJobs {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.salalryJobs p a {
+    color: #243140;
 }

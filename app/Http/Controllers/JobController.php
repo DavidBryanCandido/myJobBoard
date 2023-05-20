@@ -57,7 +57,13 @@ class JobController extends Controller
      */
     public function show($id)
     {
-        //
+        $job = Job::findOrFail($id);
+
+        $company = Company::find(1);
+        $job->companies()->associate($company);
+
+        // Return the job details as HTML partial
+        return view('includes.job-details', ['job' => $job])->render();
     }
 
     /**

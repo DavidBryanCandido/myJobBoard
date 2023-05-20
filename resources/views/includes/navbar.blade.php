@@ -23,7 +23,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="Post_Job">
-                    <a href="/jobs/create">Employer / Post Job</a>
+                    <li><a class="{{ setActiveLink('jobs/create') }}"href="/jobs/create">Employer / Post Job</a></li>
                 </div>
             </div>
         </div>

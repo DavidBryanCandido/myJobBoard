@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('jobs', [App\Http\Controllers\JobController::class, 'index']);
 Route::get('jobs/create', [App\Http\Controllers\JobController::class, 'create']);
 Route::post('jobs', [App\Http\Controllers\JobController::class, 'store']);
+Route::get('/jobs/{id}', [App\Http\Controllers\JobController::class, 'show']);
 Route::get('companies', [App\Http\Controllers\CompanyController::class, 'index']);
 
 // Route::get('/name', function(){
