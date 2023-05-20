@@ -4,20 +4,27 @@
             <div class="logo">
                 <img src="/img/JobPlaza_logov2.png" alt="JobPlaza">
             </div>
-            <ul>
-                <li><a class="{{ setActiveLink('jobs') }}" href="/jobs">Jobs</a></li>
-                <li><a class="{{ setActiveLink('companies') }}" href="/companies">Company</a></li>
-            </ul>
+           
         </div>
         <div class="navbarRightside">
-            <div class="register_login">
-                <a href="#">Login / 
-                    <a href="#">Register</a>
-                </a>
+            <div class="navlink">
+                <ul>
+                   <li><a class="{{ setActiveLink('jobs') }}" href="/jobs">Jobs</a></li>
+                   <li><a class="{{ setActiveLink('companies') }}" href="/companies">Company</a></li>
+               </ul>
             </div>
-
-            <div class="Post_Job">
-                <a href="/jobs/create">Post Job</a>
+            <div class="rLP">
+                <div class="register_login">
+                    <p>
+                        <a href="#">Login</a>
+                        /
+                        <a href="#">Register</a>
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="Post_Job">
+                    <a href="/jobs/create">Employer / Post Job</a>
+                </div>
             </div>
         </div>
     </div>

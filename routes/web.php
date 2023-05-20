@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Company;
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
@@ -22,8 +23,18 @@ Route::get('/', function () {
 Route::get('jobs', [App\Http\Controllers\JobController::class, 'index']);
 Route::get('jobs/create', [App\Http\Controllers\JobController::class, 'create']);
 Route::post('jobs', [App\Http\Controllers\JobController::class, 'store']);
+Route::get('companies', [App\Http\Controllers\CompanyController::class, 'index']);
 
+// Route::get('/name', function(){
+//     //palitan mo nalang na ibang name tong /name
+//     $company = Company::all();
+//     //palitan mo tong $company ng name ng ginagawa mo
+//     //palitan mo yung Company ng model name na ginagawan mo ng views
 
+//     return view('job.index');
+//     // palitan mo yung job ng folderName kung nilagay mosya sa folder pag hindi mo nilagay sa folder yung file name lang ilagay mo
+//     //palitan mo yung index nang name ng blade.php na guto mong i display
+// });
 
 
 

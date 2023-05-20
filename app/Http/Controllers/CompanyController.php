@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Job;
 use App\Models\Company;
+use Illuminate\Http\Request;
 
-class JobController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all();
+        $companies = Company::all();
 
-        return view('job.index', compact('jobs') );
+        return view('company.companies', compact('companies') );
     }
 
     /**
@@ -27,7 +26,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        return view('job.create');
+        //
     }
 
     /**
@@ -38,15 +37,7 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        $job = new Job;
-        $job->fill($request->all());
-
-        $company = Company::find(2);
-        $job->companies()->associate($company);
-
-        $job->save();
-
-        return redirect('jobs');
+        //
     }
 
     /**

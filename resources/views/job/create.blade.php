@@ -26,8 +26,8 @@
                         <select id="jobs" name="type" class="inputCon-field">
                             <div >
                                 <option value="" disabled selected>Select job type</option>
-                                <option value="full_time">Full-Time</option>
-                                <option value="part_time">Part-Time</option>
+                                <option value="Full-Time">Full-Time</option>
+                                <option value="Part-Time">Part-Time</option>
                             </div>
                         </select>
                     </div>
@@ -35,7 +35,9 @@
                         <label>Salary</label>
                         <input type="text" name="salary" class="form-input">
                     </div>
-                    <button type="submit" class="" >Save</button>
+                    <div class="btn">
+                        <button type="submit" class="button button2" >Post Job</button>
+                    </div>
                 </form>
             </div>
         </div>
